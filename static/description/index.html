@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Message In Odoo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f7;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
+      .logo {
+        height: 40px;
+      }
+      .badge {
+        background-color: #0071e3;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+      }
+      .hero {
+        background-color: white;
+        border-radius: 20px;
+        padding: 4rem 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #1d1d1f;
+      }
+      .subtitle {
+        font-size: 1.5rem;
+        color: #86868b;
+        margin-bottom: 2rem;
+      }
+      .video-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      video {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      .feature {
+        background-color: white;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #0071e3;
+      }
+      .feature h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #1d1d1f;
+      }
+      .screenshots {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+      .screenshot {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .screenshot img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .screenshot-title {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #1d1d1f;
+        text-align: center;
+      }
+      .company-info {
+        background-color: white;
+        border-radius: 20px;
+        padding: 3rem 2rem;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .company-info h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #1d1d1f;
+      }
+      .company-info p {
+        color: #86868b;
+        max-width: 600px;
+        margin: 0 auto 1rem;
+      }
+      a {
+        color: #0071e3;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .services {
+        background-color: white;
+        border-radius: 20px;
+        padding: 3rem 2rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .services h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #1d1d1f;
+        text-align: center;
+      }
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+      .service-item {
+        text-align: center;
+      }
+      .service-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #0071e3;
+      }
+      .service-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #1d1d1f;
+      }
+      .service-item p {
+        color: #86868b;
+        font-size: 0.9rem;
+      }
+      .company-banner {
+        max-width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="https://bashalog.com/_next/image?url=%2Fassets%2Fimg%2Flogo.png&w=640&q=75"
+          alt="Bashalog Logo"
+          class="logo"
+        />
+        <div>
+          <span class="badge">Community</span>
+          <span class="badge">Enterprise</span>
+        </div>
+      </header>
+
+      <section class="hero">
+        <h1>Voice Message In Odoo</h1>
+        <p class="subtitle">
+          Seamlessly record and send voice messages in Odoo Chatter
+        </p>
+        <div class="video-container">
+          <video
+            src="assets/screenshots/video.webm"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <div class="feature-icon">🎙️</div>
+          <h3>Voice Recording</h3>
+          <p>New icon for easy voice recording directly in Odoo</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📤</div>
+          <h3>Send Voice Messages</h3>
+          <p>Effortlessly send recorded voice messages</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure Communication</h3>
+          <p>HTTPS required for enhanced security</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🗑️</div>
+          <h3>Easy Deletion</h3>
+          <p>Remove voice messages with a simple delete button</p>
+        </div>
+      </section>
+
+      <section class="screenshots">
+        <div class="screenshot">
+          <img src="assets/screenshots/1.png" alt="Recording voice on HTTPS" />
+          <div class="screenshot-title">Recording voice on HTTPS</div>
+        </div>
+        <div class="screenshot">
+          <img src="assets/screenshots/2.png" alt="Sending recorded voice" />
+          <div class="screenshot-title">
+            Sending recorded voice, you can send multiple voice messages
+          </div>
+        </div>
+        <div class="screenshot">
+          <img
+            src="assets/screenshots/3.png"
+            alt="Voice messages with delete option"
+          />
+          <div class="screenshot-title">Implemented in the chatter</div>
+        </div>
+      </section>
+
+      <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+          <div class="service-item">
+            <div class="service-icon">🛠️</div>
+            <h3>Odoo Customization</h3>
+            <p>
+              Tailor Odoo to fit your unique business needs with our expert
+              customization services.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🚀</div>
+            <h3>Odoo Implementation</h3>
+            <p>
+              Seamlessly integrate Odoo into your business operations with our
+              comprehensive implementation support.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🔧</div>
+            <h3>Odoo Support</h3>
+            <p>
+              Get reliable, ongoing support to ensure your Odoo system runs
+              smoothly and efficiently.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">👨‍💻</div>
+            <h3>Hire Odoo Developer</h3>
+            <p>
+              Access skilled Odoo developers to enhance your team and accelerate
+              your projects.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🔗</div>
+            <h3>Odoo Integration</h3>
+            <p>
+              Connect Odoo with your existing systems for streamlined data flow
+              and improved efficiency.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🔄</div>
+            <h3>Odoo Migration</h3>
+            <p>
+              Smoothly transition to the latest Odoo version or migrate from
+              other systems with our expert assistance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-info">
+        <img
+          src="assets/icons/banner-white.png"
+          alt="Bashalog Banner"
+          class="company-banner"
+        />
+        <h2>About Bashalog</h2>
+        <p>
+          At Bashalog, we're dedicated to creating innovative software solutions
+          that empower businesses in the digital age. Our expertise in Odoo
+          development allows us to deliver tailored, high-quality applications
+          that streamline operations and boost efficiency.
+        </p>
+        <p>
+          <a href="https://www.bashalog.com" target="_blank"
+            >www.bashalog.com</a
+          >
+          | <a href="mailto:info@bashalog.com">info@bashalog.com</a>
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
