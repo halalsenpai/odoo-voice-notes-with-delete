@@ -47,4 +47,8 @@ It also includes a delete button for each voice message, allowing users to remov
     'installable': True,
     'auto_install': False,
     'application': False,
+     'images': [
+        'static/description/assets/screenshots/icon.png',  
+        'static/description/assets/screenshots/cover.png',  
+    ],
 }
